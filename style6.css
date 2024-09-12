@@ -1,0 +1,228 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #f9a825;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('cafe\ 1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    animation: moveDown 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    animation: fadeIn 4s ease-in-out;
+}
+
+
+
+
+
+.btn {
+    display: inline-block;
+    background: #f9a825;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    animation: bounce 2s infinite;
+}
+.menu-item{
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover{
+    transform: scale(1.05);
+
+}
+
+.hover-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover .hover-image{
+    opacity: 0.8;
+}
+
+.menu-item.coffee .hover-image{
+    background-image: url(coffee1.jpg);
+}
+.menu-item.blackcoffee .hover-image{
+    background-image: url(black\ coffee.webp);
+}
+.menu-item.tea .hover-image{
+    background-image: url(tea.jpg);
+}
+.menu-item.blacktea .hover-image{
+    background-image: url(black\ tea.jpg);
+}
+.menu-item.cappuccino .hover-image{
+    background-image: url(cappuchino.jpg);
+}
+.menu-item.cake .hover-image{
+    background-image: url(cake.jpeg);
+}
+.menu-item.sandwich .hover-image{
+    background-image: url(sandwich.jpeg);
+}
+.menu-item.salad .hover-image{
+    background-image: url(salad.jpeg);
+}
+.menu-item.mojito .hover-image{
+    background-image: url(mojito.jpeg);
+}
+.menu-item.waterbottle .hover-image{
+    background-image: url(water\ bottle.webp);
+}
+
+.btn:hover {
+    background: #ffb300;
+}
+
+/* Menu Section */
+#menu {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    background-image: url(cafe2.webp);
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    animation: zoomIn 2s ease;
+}
+
+.menu-item {
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes moveDown {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+}
